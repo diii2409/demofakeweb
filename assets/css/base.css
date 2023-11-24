@@ -4,7 +4,7 @@
     --text-color : #333;
     --primary-color: rgb(250, 74, 45);
     --border-color : #dbdbdb;
-
+    --star-glod-color: rgb(255, 198, 56);
     --header-height : 130px;
     --navbar-height : 34px;
     --header-with-search-height : calc(var(--header-height) - var(--navbar-height) );
