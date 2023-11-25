@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div class="app">
         <!-- HEADER -->
         <header class="header">
-            <div class="gird">  
+            <div class="grid wide">  
                 <!-- NAVIGATION -->
-                <nav class="header__navbar">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <!-- LEFT LIST -->
                     <ul class="header__navbar-list ">
                         <li class="header__navbar-item header__navbar-item--separate header__navbar-item--qr">
@@ -143,8 +145,10 @@
 
                 <!-- HEADER WITH SEARCH -->
                 <div class="header-with-search">
-
-                    <div class="header__logo">
+                    <label for="mobile-seaerch-checkbox" class="heasder__mobie-search">
+                        <i class="header__mobie-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header_logo-link">        
                              <svg viewBox="0 0 192 65" class="header-img">
                                 <g fill-rule="evenodd">
@@ -157,13 +161,16 @@
                         </a>
                     </div>
 
-                    <div class="header__search">
+                    <input type="checkbox" hidden id="mobile-seaerch-checkbox" class = "header__search-checkbox">
+
+                    <div class="header__search ">
                         <div class="header__Search-input-warp">
                             <input type="text" class="header__Search-input" placeholder="Tìm kiếm ở đây">
                             <!-- Search history -->
                             <div class="header__Search-history">
-                                <h3 class="header__Search-heading">Lịch sử tìm kiếm</h3>
-
+                                <!-- <div class="header__Search-heading">
+                                    <h3 class="">Lịch sử tìm kiếm</h3>
+                                </div> -->
                                 <ul class="header__Search-list">
                                     <li class="header__Search-item">
                                         <a href="" >Gundam Bardator</a>
@@ -193,79 +200,79 @@
                         </button>
                     </div>
                     <!-- Cart layout -->
-                    <div class="header_cart">
-                        <div class="header_cart-warp">
-                            <i class="header_cart-icon fa-solid fa-cart-plus"></i>
-                            <span class="header_cart-notice">3</span>
-                            <!-- No cart : header_cart-list--no-cart -->
-                            <!-- Has cart : header_cart-list--has-cart -->
-                            <div class="header_cart-list ">
+                    <div class="header__cart">
+                        <div class="header__cart-warp">
+                            <i class="header__cart-icon fa-solid fa-cart-plus"></i>
+                            <span class="header__cart-notice">3</span>
+                            <!-- No cart : header__cart-list--no-cart -->
+                            <!-- Has cart : header__cart-list--has-cart -->
+                            <div class="header__cart-list ">
                                 <img src="./assets/img/no_cart.png" alt="" class="header_no-cart-img">
-                                <p class="header_cart-mess">Chưa có sản phẩm</p>
+                                <p class="header__cart-mess">Chưa có sản phẩm</p>
 
-                                <h4 class="header_cart-heading">Sản phẩm đã thêm</h4>
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
                                 <!-- cart item  -->
-                                <ul class="header_cart-list-itemm">
-                                    <li class="header_cart-item">
-                                        <img src="./assets/img/item1.jpg" alt="" class="header_cart-img">
-                                        <div class="header_cart-item-info">
-                                            <div class="header_cart-item-head"> 
-                                                <h5 class="header_cart-item-name">Cây cà lem màu vàng</h5>
-                                                <div class="header_cart-price-warp">    
-                                                    <span class="header_cart-item-price">2.000.000đ</span>
-                                                    <span class="header_cart-item-multiply">x</span>
-                                                    <span class="header_cart-item-quantity">2</span>
+                                <ul class="header__cart-list-itemm">
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/item1.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head"> 
+                                                <h5 class="header__cart-item-name">Cây cà lem màu vàng</h5>
+                                                <div class="header__cart-price-warp">    
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-quantity">2</span>
                                                 </div>
                                             </div>
-                                            <div class="header_cart-item-body">
-                                                <span class="header_cart-item-discription">
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-discription">
                                                     Phân loại: Bạc
                                                 </span>
-                                                <span class="header_cart-item-remove">
+                                                <span class="header__cart-item-remove">
                                                     Xóa
                                                 </span>
                                             </div>
                                         </div>
                                     </li>
 
-                                    <li class="header_cart-item">
-                                        <img src="./assets/img/item1.jpg" alt="" class="header_cart-img">
-                                        <div class="header_cart-item-info">
-                                            <div class="header_cart-item-head"> 
-                                                <h5 class="header_cart-item-name">Cây cà lem màu vàng</h5>
-                                                <div class="header_cart-price-warp">    
-                                                    <span class="header_cart-item-price">2.000.000đ</span>
-                                                    <span class="header_cart-item-multiply">x</span>
-                                                    <span class="header_cart-item-quantity">2</span>
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/item1.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head"> 
+                                                <h5 class="header__cart-item-name">Cây cà lem màu vàng</h5>
+                                                <div class="header__cart-price-warp">    
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-quantity">2</span>
                                                 </div>
                                             </div>
-                                            <div class="header_cart-item-body">
-                                                <span class="header_cart-item-discription">
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-discription">
                                                     Phân loại: Bạc
                                                 </span>
-                                                <span class="header_cart-item-remove">
+                                                <span class="header__cart-item-remove">
                                                     Xóa
                                                 </span>
                                             </div>
                                         </div>
                                     </li>
 
-                                    <li class="header_cart-item">
-                                        <img src="./assets/img/item1.jpg" alt="" class="header_cart-img">
-                                        <div class="header_cart-item-info">
-                                            <div class="header_cart-item-head"> 
-                                                <h5 class="header_cart-item-name">Cây cà lem màu vàng</h5>
-                                                <div class="header_cart-price-warp">    
-                                                    <span class="header_cart-item-price">2.000.000đ</span>
-                                                    <span class="header_cart-item-multiply">x</span>
-                                                    <span class="header_cart-item-quantity">2</span>
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/item1.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head"> 
+                                                <h5 class="header__cart-item-name">Cây cà lem màu vàng</h5>
+                                                <div class="header__cart-price-warp">    
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-quantity">2</span>
                                                 </div>
                                             </div>
-                                            <div class="header_cart-item-body">
-                                                <span class="header_cart-item-discription">
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-discription">
                                                     Phân loại: Bạc
                                                 </span>
-                                                <span class="header_cart-item-remove">
+                                                <span class="header__cart-item-remove">
                                                     Xóa
                                                 </span>
                                             </div>
@@ -273,17 +280,36 @@
                                     </li>
                                 </ul>
 
-                                <button class="header_cart-view-cart btn btn--primary">Xem giỏ hàng</button>
+                                <button class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</button>
                             </div>
                         </div>
                     </div>
             </div>
+            <div class="grid wide">
+                <div class="row">
+                    <ul class="header__sort-bar">
+                        <li class="header__sort-item">
+                            <a href="" class="header__sort-link">Liên quan</a>
+                        </li>
+                        <li class="header__sort-item header__sort-item--active">
+                            <a href="" class="header__sort-link">Mới nhẩt</a>
+                        </li>
+                        <li class="header__sort-item">
+                            <a href="" class="header__sort-link">Bán chạy</a>
+                        </li>
+                        <li class="header__sort-item">
+                            <a href="" class="header__sort-link">Giá</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
         </header>
 <!-- ------------------------------------------------------- -->
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__heading">
                                 <i class="category__heading-icon fa-solid fa-list"></i>
@@ -303,9 +329,9 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="grid__column-10">
-                        <div class="home-filter">
-                            <span class="home-filter__lable">Sắp xếp theo</span>
+                    <div class="col l-10 m-12 c-12 ">
+                        <div class="home-filter hide-on-mobile-tablet ">
+                            <span class="home-filter__lable ">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
                             <button class="home-filter__btn btn">Bán chạy nhất</button>
@@ -340,9 +366,56 @@
                             </div>
                         </div>
 
+                        <nav class="mobiie-category">
+                            <ul class="mobie-category__list">
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                                <li class="mobie-category__item">
+                                    <a href="" class="mobie-category__link">Điện thoại sumsung màn hình bự</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
-                            <div class="grid__row">
-                                <div class="grid__column-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -384,7 +457,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -426,7 +499,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -468,7 +541,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -510,7 +583,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -552,7 +625,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -594,7 +667,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -636,7 +709,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -678,7 +751,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -720,7 +793,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <!-- product-item -->
                                     <a href="#" class="home-product-item" >
                                         <div class="home-product-item__img" style ="background-image: url(https://img.websosanh.vn/v10/users/review/images/ss71th0lm77jm/1561523423221_3205728.jpg?compress=85); "></div>
@@ -797,9 +870,9 @@
         </div>
 <!-- ------------------------------------------------------- -->
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row"> 
-                    <div class="grid__column-2-4">
+            <div class="grid wide">
+                <div class="row"> 
+                    <div class="col l-2-4 m-4 c-6 ">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -813,7 +886,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6 ">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -827,7 +900,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6 ">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -841,7 +914,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6 ">
                         <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -864,7 +937,7 @@
                             </li>
                         </ul> 
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-8 c-12 footer--center">
                         <h3 class="footer__heading">vào cửa hàng ứng dụng</h3>
                         <div class="footer-dowload">
                             <img src="./assets/img/QR_DowShoppe.png" alt="" class="footer-dowload__QP">
@@ -886,7 +959,7 @@
             </div>
         </footer>
         <div class="footer__bottom">
-            <div class="grid__row">
+            <div class="row">
                 <p class ="footer__text">Công ty trách nhiệm hữu hạn mình thằng Diii </p>
             </div>
         </div>
