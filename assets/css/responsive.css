@@ -37,6 +37,9 @@
         .footer__bottom{
             padding: 15px 0;
         }
+        .header__mobie-search-icon {
+            display: block;
+        }
     }
     /* TABLET */
     @media (min-width: 740px) and (max-width: 1023px) {

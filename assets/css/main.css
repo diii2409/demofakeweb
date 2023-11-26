@@ -519,6 +519,7 @@
 }
 
 .header__mobie-search-icon {
+    display: none;
     font-size: 2.6rem;
     color: var(--white-color);
     padding: 0 8px;
