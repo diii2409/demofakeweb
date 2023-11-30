@@ -74,11 +74,8 @@
         .header__cart-list::after{
             display: none;
         }
-        .footer-dowload{
-        }
-        .footer-dowload__QP {
 
-        }
+ 
         .footer__app{
 
             -webkit-tap-highlight-color: transparent;
@@ -188,9 +185,7 @@
         .pagination-iten{
             margin: 0 6px;
         }
-        .pagination-iten__link{
 
-        }
     }
 
     @keyframes SearchSideIn {
